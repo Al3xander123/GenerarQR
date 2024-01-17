@@ -15,7 +15,7 @@
       //https://script.google.com/macros/s/AKfycbzIFwsnrrqjUXlBDqqHEYwj_lbeindHDUVQekG2vw-8Bn2HQAOW7K-UGVNVGBUmQDuSqA/exec      
       const url = document.location.href;
       var k = url.substr(url.lastIndexOf("k=")+2);
-
+      console.log(k);
       if(k){
         fetch(AS_URL_BASE+'?k='+k)
         .then(r=> r.text())
