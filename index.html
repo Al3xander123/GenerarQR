@@ -3,9 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      #MiTexto{
+        border:1px solid black;
+        }
+    </style>
   </head>
   <body>
+
+    <div id="MiTexto">
+    </div>
     <script>
+      //////////////////////
+      let texto = document.getelementById("MiTexto");
+      let ver = ""
+      /////////////////////
+      
       const AS_URL_BASE = "https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKpxu72oFE/edit?usp=sharing&ouid=112199374666929425781&rtpof=true&sd=true";
       //Este es el mio
       //https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKpxu72oFE/edit?usp=sharing&ouid=112199374666929425781&rtpof=true&sd=true
@@ -16,6 +29,7 @@
       const url = document.location.href;
       var k = url.substr(url.lastIndexOf("k=")+2);
       console.log(k);
+      texto.innerHTML = k
       if(k){
         fetch(AS_URL_BASE+'?k='+k)
         .then(r=> r.text())
