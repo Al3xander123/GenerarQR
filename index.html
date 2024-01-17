@@ -4,18 +4,21 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-      #MiTexto{
+      .bordes{
         border:1px solid black;
         }
     </style>
   </head>
   <body>
 
-    <div id="MiTexto">
-    </div>
+    <div class = "bordes" id="MiTextoa"></div><br>
+    <div class = "bordes" id="MiTextob"></div><br>
+    <div class = "bordes" id="MiTextoc"></div><br>
     <script>
       //////////////////////
-      let texto = document.getElementById("MiTexto");
+      let textoa = document.getElementById("MiTextoa");
+      let textob = document.getElementById("MiTextob");
+      let textoc = document.getElementById("MiTextoc");
       let ver = ""
       /////////////////////
       
@@ -29,14 +32,16 @@
       const url = document.location.href;
       var k = url.substr(url.lastIndexOf("k=")+2);
       console.log(k);
-      texto.innerHTML = k
+      textoa.innerHTML = k;
       if(k){
         fetch(AS_URL_BASE+'?k='+k)
         .then(r=> r.text())
+         textob.innerHTML = r;
         .then((r)=>{
 //          console.log(r)
           if(r){
             document.location.replace(r);
+            textoc.innerHTML = r;
           }
         })
         .catch(err=>console.log(err))
