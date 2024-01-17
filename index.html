@@ -12,7 +12,7 @@
 
       if(k){
         fetch(AS_URL_BASE+'?k='+k)
-        .then(r=> t.text())
+        .then(r=> r.text())
         .then((r)=>{
           console.log(r)
           if(r){
