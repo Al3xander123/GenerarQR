@@ -25,6 +25,13 @@ boton0.onclick = FuncionFetch;//Funcion Nuevo Texto en el Boton
 //boton2.onclick = MiFuncion2;//Funcion Nuevo Texto en el Boton
 //boton3.onclick = MiFuncion3;//Funcion Nuevo Texto en el Boton
 //boton4.onclick = MiFuncion4;//Funcion Nuevo Texto en el Boton
+      var k = url.substr(url.lastIndexOf("k=")+2);
+      console.log(k);
+//      textoa.innerHTML = k;
+      if(k){
+	      FuncionFetch()
+      }
+
 
 function MiFuncion3(){
 	substraer = texto.substr(texto.lastIndexOf("still"));
