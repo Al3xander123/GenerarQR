@@ -1,11 +1,13 @@
 html,body{
 	height:99%;
-	background-color:black;
+	background-color:white;
 	color:white;
   font-family:monospace;
+	display:grid;place-items;center;
 }
 
 .main{
+	display:flex;grid-gap:10;
 	padding:10px;
 	grid-gap:10px;
 	height:100%;
