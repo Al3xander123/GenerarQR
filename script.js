@@ -92,7 +92,8 @@ function MiFuncion0(){
           }})//.catch(err=>console.log(err))
       }
 	  console.log(0);
-		setTimeout(MiFuncion1, 5000);
+	MiFuncion1();
+	//setTimeout(MiFuncion1, 5000);
 }
 
 
