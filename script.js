@@ -55,7 +55,7 @@ function MiFuncion2(){
 }
 
 function MiFuncion3(){
-	let extraerss = document.getElementsByTagName("td")[5].innerHTML;
+	let extraerss = document.getElementsByTagName("td")[0].innerHTML;
 	mitexto.innerHTML = extraerss;
 	console.log(3);
 //	MiFuncion4();
