@@ -7,6 +7,11 @@ let boton4 = document.getElementsByTagName("button")[4];
 let mitexto = document.getElementById("Mi_Texto");
 let mitextoa = document.getElementById("midiv");
 
+let ocultar1 = document.getElementsByClassName("absoluta")[0];
+let ocultar2 = document.getElementsByClassName("absoluta")[1];
+let mostrar = document.getElementsByClassName("texto")[0];
+
+
 let MiUrl = document.getElementsByClassName("Mi_Url")[0];
 let url = document.location.href;
 
@@ -17,14 +22,14 @@ let MiUrl3 = MiUrl2 + MiCelda
 
 let substraer = "";
 
-//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
-//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
-boton0.onclick = FuncionFetch;//Funcion Nuevo Texto en el Boton
 
+//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
+//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
 //boton1.onclick = MiFuncion1;//Funcion Nuevo Texto en el Boton
 //boton2.onclick = MiFuncion2;//Funcion Nuevo Texto en el Boton
 //boton3.onclick = MiFuncion3;//Funcion Nuevo Texto en el Boton
 //boton4.onclick = MiFuncion4;//Funcion Nuevo Texto en el Boton
+
       var k = url.substr(url.lastIndexOf("k=")+2);
       console.log(k);
 //      textoa.innerHTML = k;
@@ -32,6 +37,13 @@ boton0.onclick = FuncionFetch;//Funcion Nuevo Texto en el Boton
 	      FuncionFetch()
       }
 
+function FuncionFetch(){
+	fetch(MiCelda)
+	.then(response => response.text())
+	.then(data => mitexto.innerHTML=data)//console.log(data);mitexto.innerHTML=data;)
+	setTimeout(MiFuncion1, 5000);
+
+}
 
 function MiFuncion3(){
 	substraer = texto.substr(texto.lastIndexOf("still"));
@@ -62,9 +74,14 @@ function MiFuncion2(){
 }
 
 function MiFuncion3(){
-	let extraerss = document.getElementsByTagName("td")[0].innerHTML;
+	let extraerss = document.getElementsByTagName("td")[5].innerHTML;
 	mitexto.innerHTML = extraerss;
 	console.log(3);
+	ocultar1.style.display = "none";
+	ocultar2.style.display = "none";
+	mitexto.style.display = "block";
+//	mitexto.style.color = "white";
+	mitexto.style.opacity = "1.0";
 //	MiFuncion4();
 }
 
@@ -74,33 +91,24 @@ function MiFuncion4(){
 }
 
 
-function FuncionFetch(){
-	fetch(MiCelda)
-	.then(response => response.text())
-	.then(data => mitexto.innerHTML=data)//console.log(data);mitexto.innerHTML=data;)
-	setTimeout(MiFuncion1, 5000);
-
-}
-
 function MiFuncion0(){
 	var k = url.substr(url.lastIndexOf("k=")+2);
 	if(k){
         //fetch(AS_URL_BASE+'?k='+k)  ///ESTE ES EL ORIGINAL
-        fetch(MiCelda)
+        fetch(MiUrl2)
         //fetch(micelda+'k='+k)
         .then(r=> r.text())//.text())
 //         textob.innerHTML = r;
-        .then((d)=>{
+        .then((r)=>{
 //          console.log(r)
-          if(d){
+          if(r){
             document.location.replace(r);
             mitexto.innerHTML = r;
-            console.log(d);
+            console.log(r);
           }})//.catch(err=>console.log(err))
       }
 	  console.log(0);
-	MiFuncion1();
-	//setTimeout(MiFuncion1, 5000);
+	  setTimeout(MiFuncion1, 5000);
 }
 
 
