@@ -1,10 +1,11 @@
 html,body{
-	border:1px solid blue;
+	
 	height:99%;
 	background-color:white;
 	color:white;
   font-family:monospace;
 	display:grid;place-items:center;
+	border: 2px solid blue;
 }
 
 .main{
