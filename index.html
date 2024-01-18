@@ -4,55 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title></title>
-  <!--link rel="stylesheet" type="text/css" href="estilos.css"-->
-  <style>
-    #color{
-      border:2px solid blue;
-    }
-  </style>
+<link rel = "stylesheet" type = "text/css" href ="estilos.css"/>
 </head>
-  <body>
+<body>
 
-<button id = "miboton1">Buscar</button><br>
-<div id = "color">
-<div class="Mi_Texto" id="Mi_Texto"></div>
+<!--p><button id = "miboton1">Buscar</button></p><br-->
+
+<div class="relativa">
+<div class="absoluta "><img src="cargando.png" alt = "" title = "" width="100" height="100"/></div>
+<div class="absoluta gente">Buscando</div>
+<div class="absoluta texto" id="Mi_Texto"></div>
 </div>
 
-
-<script src="script.js"></script>
-    <!--script>
-      //////////////////////
-      let textoa = document.getElementById("MiTextoa");
-      
-      //let textoc =document.getElementsByTagName("body");
-      let ver = ""
-      
-      const url = document.location.href;
-      const micelda = "https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKpxu72oFE/edit#gid=1492913522&range=A9";
-      const micelda2 = "https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKpxu72oFE/edit#gid=1492913522&range=A9";
-      const micelda3 = "https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKpxu72oFE/edit?usp=sharing&ouid=112199374666929425781&rtpof=true&sd=true";
-      console.log(url);
-      var k = url.substr(url.lastIndexOf("k=")+2);
-      console.log(k);
-//      textoa.innerHTML = k;
-      if(k){
-        //fetch(AS_URL_BASE+'?k='+k)  ///ESTE ES EL ORIGINAL
-        fetch(micelda3)
-        //fetch(micelda+'k='+k)
-        .then(r=> r.text())
-//         textob.innerHTML = r;
-        .then((r)=>{
-//          console.log(r)
-          if(r){
-            document.location.replace(r);
-            textoa.innerHTML = r;
-            console.log(r);
-          }
-        })
-        .catch(err=>console.log(err))
-      }
-  </script-->
-
-    
-  </body>
+<script src="scripts.js"></script>
+</body>
 </html>
