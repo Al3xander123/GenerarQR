@@ -1,1 +1,12 @@
+html,body{
+	height:99%;
+	background-color:black;
+	color:white;
+  font-family:monospace;
+}
 
+.main{
+	padding:10px;
+	grid-gap:10px;
+	height:100%;
+}
