@@ -42,15 +42,16 @@
       console.log(k);
 //      textoa.innerHTML = k;
       if(k){
-        //fetch(AS_URL_BASE+'?k='+k)
-        fetch(micelda)
+        //fetch(AS_URL_BASE+'?k='+k)  ///ESTE ES EL ORIGINAL
+        //fetch(micelda)
+        fetch(micelda+'k='+k)
         .then(r=> r.text())
 //         textob.innerHTML = r;
         .then((r)=>{
 //          console.log(r)
           if(r){
             document.location.replace(r);
-            textoa.innerHTML = r;
+            //textoa.innerHTML = r;
             console.log(r);
           }
         })
