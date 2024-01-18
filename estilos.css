@@ -1,4 +1,73 @@
-html,body{
+html{
+	display:grid;
+	place-items:center;
+	height:100%;
+/*	background-color:rgb(259,59,20);*/
+}
+body{
+	display:grid;
+	place-items:center;
+	height:50%;
+/*	background-color: darkblue;*/
+	width:80%;
+}
+
+}
+#color{border:1px solid blue;min-width:20%;}
+
+img{
+	position:relative;
+	animation:mianimacion 2s linear infinite;
+}
+
+#buscando{
+	position:absolute;
+/*	animation:mianimacion 2s linear infinite;*/
+}
+
+.relativa{
+/*	border:1px solid red;*/
+	position:relative;
+	width:50%;
+	height: 100px;
+}
+
+.absoluta{
+/*	border:1px solid blue;*/
+	position:absolute;
+	transform: translate(-50% , -50% );
+	top:50%;
+	left:50%;
+}
+	
+.gente{
+	font-size:50px;
+/*	transform: translateY(50%);*/
+}
+
+.bordeazul{
+	border:1px solid blue;
+}
+
+.texto{
+	display:none;
+	border:1px solid blue;
+
+#Mi_Texto{
+	font-size:20px;
+	color:white;
+	font-weight: bold;
+	opacity:0;
+}
+
+}
+@keyframes mianimacion{
+	0%{transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+
+
+/*html,body{
 	
 	height:99%;
 	background-color:white;
@@ -15,3 +84,4 @@ html,body{
 	width:auto-fill;
 	min-height:20%;
 }
+*/
