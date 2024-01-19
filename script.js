@@ -82,7 +82,7 @@ function MiFuncion3(){
 //	mitexto.style.display = "block";
 //	mitexto.style.color = "white";
 	mitexto.style.opacity = "1";
-	mitexto.style.fontSize = "25px";
+//	mitexto.style.fontSize = "25px";
 	fondo.style.filter="blur(8px)";
 //	MiFuncion4();
 }
