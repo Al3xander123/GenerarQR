@@ -42,7 +42,7 @@ body{
   background-size: cover;
 
 }
-#color{border:1px solid blue;min-width:20%;}
+#color{border:1px solid black;min-width:20%;}
 
 img{
 	position:relative;
@@ -76,7 +76,7 @@ img{
 }
 
 .bordeazul{
-	border:1px solid blue;
+	border:1px solid black;
 }
 
 .texto{
