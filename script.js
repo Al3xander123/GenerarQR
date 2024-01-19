@@ -22,7 +22,7 @@ let MiUrl3 = MiUrl2 + MiCelda
 
 let substraer = "";
 
-
+let fondo = document.getElementsByClassName("bg-image")[0];
 //boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
 //boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
 //boton1.onclick = MiFuncion1;//Funcion Nuevo Texto en el Boton
@@ -79,9 +79,11 @@ function MiFuncion3(){
 	console.log(3);
 	ocultar1.style.display = "none";
 	ocultar2.style.display = "none";
-	mitexto.style.display = "block";
+//	mitexto.style.display = "block";
 //	mitexto.style.color = "white";
-	mitexto.style.opacity = "1.0";
+	mitexto.style.opacity = "1";
+	mitexto.style.fontSize = "25px";
+	fondo.style.filter="blur(8px)";
 //	MiFuncion4();
 }
 
