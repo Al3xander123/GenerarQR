@@ -37,7 +37,7 @@ async function FuncionFetch(archivo){
 	extraer = await extraer.replace("Codigo:",'<div class="sucursalb">C&oacute;digo:</div> - ');
 	extraer = await extraer.replace("Descripcion:",'<div class="sucursalb">Descripci&oacute;n:</div> - ');
 	extraer = await extraer.replace("Precio:",'<div class="sucursalb">Precio:</div> - ');
-	mitexto.innerHTML = extraer+" Pesos";
+	mitexto.innerHTML = extraer;//+" Pesos";
 	ocultar1.style.opacity="0.0";
 	ocultar2.style.opacity="0.0";
 	fondo.style.filter="blur(8px)";
