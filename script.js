@@ -40,16 +40,16 @@ async function FuncionFetch(file) {
   let mitd = "<" + 	myText.substr(myText.lastIndexOf("div id="+'"'+"1492913522"+'"'));  console.log(mitd)
   mitexto.innerHTML = mitd;	console.log(mitexto)
   let extraerd = document.getElementsByTagName("td")[0].innerHTML;  console.log(extraerd)
-  mitexto.innerHTML = extraerd;
+ mitexto.innerHTML = extraerd;
 	ocultar1.style.display = "none";
 	ocultar2.style.display = "none";
-	mitexto.style.opacity = "1";
-//	mitexto.style.fontSize = "25px";
-	fondo.style.filter="blur(8px)";
 	let reemplazar = mitexto.innerHTML;
 	let reemplazardos = reemplazar.replace("Sucursal Limon 4<br>","<div class='sucursal'>Sucursal Limon 4</div>");
 	console.log(reemplazardos)
 	mitexto.innerHTML = reemplazardos;
+	fondo.style.filter="blur(8px)";
+	mitexto.style.opacity = "1";
+//	mitexto.style.fontSize = "25px";
 	console.log(mitexto)
 //	let textodos = 	mitexto.substr(myText.lastIndexOf("Sucursal Limon 4"));
 //	console.log(textodos)
