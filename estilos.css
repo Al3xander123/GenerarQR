@@ -7,10 +7,39 @@ html{
 body{
 	display:grid;
 	place-items:center;
-	height:50%;
+	height:100%;
 /*	background-color: darkblue;*/
-	width:80%;
+	width:100%;
 }
+
+.bg-image {
+  /* The image used */
+  border:1px solid black;
+  position:absolute;
+  background-image: url("fondo.png");
+  
+  /* Add the blur effect */
+/*  filter: blur(8px);
+  -webkit-filter: blur(8px);*/
+  
+  /* Full height */
+  height: 100%; 
+  width:100%;
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#fondoa{
+	background-image: url("fondo.png");
+	height: 100%;  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 #color{border:1px solid blue;min-width:20%;}
@@ -50,38 +79,23 @@ img{
 }
 
 .texto{
-	display:none;
+/*	display:none;*/
 	border:1px solid blue;
-
+	padding: 20px;
+	border-radius: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color:white;
+	background-color:orange;
+	opacity: 0.0;
+}
 #Mi_Texto{
 	font-size:20px;
-	color:white;
+/*	color:blue;*/
 	font-weight: bold;
-	opacity:0;
+/*	opacity:0;*/
 }
 
-}
 @keyframes mianimacion{
 	0%{transform: rotate(0deg);}
 	100%{transform: rotate(360deg);}
 }
-
-
-/*html,body{
-	
-	height:99%;
-	background-color:white;
-	color:white;
-  font-family:monospace;
-	display:grid;place-items:center;
-	border: 2px solid blue;
-}
-
-.main{
-	display:flex;
-	grid-gap:10px;
-	padding:10px;
-	width:auto-fill;
-	min-height:20%;
-}
-*/
