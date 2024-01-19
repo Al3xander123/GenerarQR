@@ -1,9 +1,3 @@
-let boton0 = document.getElementsByTagName("button")[0];
-let boton1 = document.getElementsByTagName("button")[1];
-let boton2 = document.getElementsByTagName("button")[2];
-let boton3 = document.getElementsByTagName("button")[3];
-let boton4 = document.getElementsByTagName("button")[4];
-
 let mitexto = document.getElementById("Mi_Texto");
 let mitextoa = document.getElementById("midiv");
 
@@ -32,28 +26,22 @@ let fondo = document.getElementsByClassName("bg-image")[0];
 	      FuncionFetch(MiUrl2)
       }
 
-async function FuncionFetch(file) {
-  let myObject = await fetch(file);
-  console.log(myObject)
-  let myText = await myObject.text();  console.log(myText)
-  let viewport = "<" + 	myText.substr(myText.lastIndexOf("sheets-viewport"));	console.log(viewport)
-  let mitd = "<" + 	myText.substr(myText.lastIndexOf("div id="+'"'+"1492913522"+'"'));  console.log(mitd)
-  mitexto.innerHTML = mitd;	console.log(mitexto)
-  let extraerd = document.getElementsByTagName("td")[0].innerHTML;  console.log(extraerd)
- mitexto.innerHTML = extraerd;
-	ocultar1.style.display = "none";
-	ocultar2.style.display = "none";
-	let reemplazar = mitexto.innerHTML;
-	let reemplazardos = reemplazar.replace("Sucursal Limon 4<br>","<div class='sucursal'>Sucursal Limon 4</div>");
-	console.log(reemplazardos)
-	mitexto.innerHTML = reemplazardos;
+async function FuncionFetch(archivo){
+	let miobjeto = await fetch(archivo);
+	let texto = await miobjeto.text();
+	let mivar = "<"+ texto.substr(texto.lastIndexOf("sheets-viewport"));
+	mivar = "<"+ mivar.substr(mivar.lastIndexOf('div id="1492913522"'));
+	mitexto.innerHTML = mivar;
+	let extraer = await mitexto.getElementsByTagName("td")[0].innerHTML;
+	extraer = await extraer.replace("Sucursal Limon 4<br>",'<div class="sucursal">Sucursal Limon 4</div>');
+	extraer = await extraer.replace("Codigo:",'<div class="sucursalb">C&oacute;digo:</div> - ');
+	extraer = await extraer.replace("Descripcion:",'<div class="sucursalb">Descripci&oacute;n:</div> - ');
+	extraer = await extraer.replace("Precio:",'<div class="sucursalb">Precio:</div> - ');
+	mitexto.innerHTML = extraer+" Pesos";
+	ocultar1.style.opacity="0.0";
+	ocultar2.style.opacity="0.0";
 	fondo.style.filter="blur(8px)";
-	mitexto.style.opacity = "1";
-//	mitexto.style.fontSize = "25px";
-	console.log(mitexto)
-//	let textodos = 	mitexto.substr(myText.lastIndexOf("Sucursal Limon 4"));
-//	console.log(textodos)
-//	mitexto.innerHTML = "" + textodos
+	mitexto.style.opacity="1";
 }
 
 
