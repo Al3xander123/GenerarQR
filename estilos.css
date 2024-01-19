@@ -84,15 +84,17 @@ img{
 	border:1px solid blue;
 	padding: 20px;
 	border-radius: 10px;
+	font-size:12px;
+	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
 	color:white;
 	background-color:orange;
 	opacity: 0.0;
 }
 #Mi_Texto{
-	font-size:15px;
+
 /*	color:blue;*/
-	font-weight: bold;
+
 /*	opacity:0;*/
 }
 
