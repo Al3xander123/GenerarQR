@@ -96,7 +96,7 @@ img{
 	font-weight:bold;
 }
 
-*{transition-duration:1s;}
+*{transition-duration:1s;transition-delay: 1s;}
 
 #Mi_Texto{
 	font-size:15px;
