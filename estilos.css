@@ -84,7 +84,7 @@ img{
 	border:1px solid blue;
 	padding: 20px;
 	border-radius: 10px;
-	font-size:20px;
+/*	font-size:20px;*/
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
 	color:white;
@@ -92,7 +92,7 @@ img{
 	opacity: 0.0;
 }
 #Mi_Texto{
-
+	font-size:20px;
 /*	color:blue;*/
 
 /*	opacity:0;*/
