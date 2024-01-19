@@ -81,8 +81,8 @@ img{
 
 .texto{
 /*	display:none;*/
-	position:relative;
-	display:grid;
+	position:absolute;
+	display:flex;
 	place-items:center;
 	border:1px solid black;
 	padding: 20px;
