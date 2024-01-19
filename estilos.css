@@ -96,6 +96,8 @@ img{
 	font-weight:bold;
 }
 
+*{transition-duration:1s;}
+
 #Mi_Texto{
 	font-size:15px;
 /*	color:blue;*/
