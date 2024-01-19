@@ -40,7 +40,7 @@ let fondo = document.getElementsByClassName("bg-image")[0];
 function FuncionFetch(){
 	fetch(MiCelda)
 	.then(response => response.text())
-	.then(data => mitexto.innerHTML=data)//console.log(data);mitexto.innerHTML=data;)
+	.then(data => mitexto.innerHTML=data;console.log(data);)
 	setTimeout(MiFuncion1, 5000);
 
 }
