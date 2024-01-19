@@ -21,96 +21,39 @@ let MiCelda = "https://docs.google.com/spreadsheets/d/1YXjp8ANJopHhJ0ByyQgsjJwKp
 let MiUrl3 = MiUrl2 + MiCelda
 
 let substraer = "";
+let data = "";
+let response = "";
 
 let fondo = document.getElementsByClassName("bg-image")[0];
-//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
-//boton0.onclick = MiFuncion0;//Funcion Nuevo Texto en el Boton
-//boton1.onclick = MiFuncion1;//Funcion Nuevo Texto en el Boton
-//boton2.onclick = MiFuncion2;//Funcion Nuevo Texto en el Boton
-//boton3.onclick = MiFuncion3;//Funcion Nuevo Texto en el Boton
-//boton4.onclick = MiFuncion4;//Funcion Nuevo Texto en el Boton
 
       var k = url.substr(url.lastIndexOf("k=")+2);
       console.log(k);
-//      textoa.innerHTML = k;
       if(k){
-	      FuncionFetch()
+	      FuncionFetch(MiUrl2)
       }
 
-function FuncionFetch(){
-	fetch(MiCelda)
-	.then(response => response.text())
-	.then(data => mitexto.innerHTML=data)//;console.log(data);)
-	setTimeout(MiFuncion1, 5000);
-
-}
-
-function MiFuncion3(){
-	substraer = texto.substr(texto.lastIndexOf("still"));
-	MiUrl.innerHTML = substraer;
-}
-
-async function getText(file) {
-	console.log(file);
+async function FuncionFetch(file) {
   let myObject = await fetch(file);
-  let myText = await myObject.text();
-  document.getElementById("Respuesta").innerHTML = myText;
-}
-
-
-function MiFuncion1(){
-	let extraer = document.getElementById("sheets-viewport").innerHTML;
-	console.log(extraer);
-	console.log(1);
-	mitexto.innerHTML = extraer;
-	MiFuncion2();
-}
-function MiFuncion2(){
-	let extraers = document.getElementById("1492913522").innerHTML;
-	console.log(extraers);
-	console.log(2);
-	mitexto.innerHTML = extraers;
-	MiFuncion3();
-}
-
-function MiFuncion3(){
-	let extraerss = document.getElementsByTagName("td")[5].innerHTML;
-	mitexto.innerHTML = extraerss;
-	console.log(3);
+  console.log(myObject)
+  let myText = await myObject.text();  console.log(myText)
+  let viewport = "<" + 	myText.substr(myText.lastIndexOf("sheets-viewport"));	console.log(viewport)
+  let mitd = "<" + 	myText.substr(myText.lastIndexOf("div id="+'"'+"1492913522"+'"'));  console.log(mitd)
+  mitexto.innerHTML = mitd;	console.log(mitexto)
+  let extraerd = document.getElementsByTagName("td")[0].innerHTML;  console.log(extraerd)
+  mitexto.innerHTML = extraerd;
 	ocultar1.style.display = "none";
 	ocultar2.style.display = "none";
-//	mitexto.style.display = "block";
-//	mitexto.style.color = "white";
 	mitexto.style.opacity = "1";
-	mitexto.style.fontSize = "20px";
+//	mitexto.style.fontSize = "25px";
 	fondo.style.filter="blur(8px)";
-//	MiFuncion4();
-}
-
-function MiFuncion4(){
-	let extraersss = document.getElementsByTagName("row-header-wrapper")[0].innerHTML;
-	mitexto.innerHTML = extraersss;
-}
-
-
-function MiFuncion0(){
-	var k = url.substr(url.lastIndexOf("k=")+2);
-	if(k){
-        //fetch(AS_URL_BASE+'?k='+k)  ///ESTE ES EL ORIGINAL
-        fetch(MiUrl2)
-        //fetch(micelda+'k='+k)
-        .then(r=> r.text())//.text())
-//         textob.innerHTML = r;
-        .then((r)=>{
-//          console.log(r)
-          if(r){
-            document.location.replace(r);
-            mitexto.innerHTML = r;
-            console.log(r);
-          }})//.catch(err=>console.log(err))
-      }
-	  console.log(0);
-	  setTimeout(MiFuncion1, 5000);
+	let reemplazar = mitexto.innerHTML;
+	let reemplazardos = reemplazar.replace("Sucursal Limon 4<br>","<div class='sucursal'>Sucursal Limon 4</div>");
+	console.log(reemplazardos)
+	mitexto.innerHTML = reemplazardos;
+	console.log(mitexto)
+//	let textodos = 	mitexto.substr(myText.lastIndexOf("Sucursal Limon 4"));
+//	console.log(textodos)
+//	mitexto.innerHTML = "" + textodos
 }
 
 
