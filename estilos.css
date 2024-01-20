@@ -49,6 +49,7 @@ body{color:white}
 /*.softmerge-inner{padding: 2vw}*/
 .sucursala,.sucursalb,.sucursalc{position:relative}
 .sucursala{
+	text-align:center;
 	/*border:1px solid black;*/
 	background-color:rgba(0,200,0,0.5)}
 
