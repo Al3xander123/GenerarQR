@@ -4,7 +4,7 @@ body{width:100%;height:100%;display:grid;place-items:center}
 *{box-sizing:border-box;}
 
 .div{width:10em;height:10em;}
-/*.div{border:2vw solid black}*/
+/*.div{border:0.1vw solid black}*/
 .div{display:grid;place-items:center}
 .imagen{position:absolute;width:100%;height:100%}/*background-size:cover;}*/
 .imagen{background-image:url("fondopc1.png");background-size:cover}
@@ -27,8 +27,9 @@ body{color:white}
 .main{font-size:3vw}
 .submain{font-size:4vw}
 .loading{font-size:3vw}
-.searching{font-size:4vw}
+.searching{font-size:8vw}
 .texto{font-size:3vw}
+/*.softmerge-inner{font-size:}*/
 .softmerge-inner{width:80%}
 .softmerge-inner{padding:2vw}
 .softmerge-inner{background-color:rgba(0,0,0,0.5)}
@@ -49,8 +50,8 @@ body{color:white}
 /*.softmerge-inner{padding: 2vw}*/
 .sucursala,.sucursalb,.sucursalc{position:relative}
 .sucursala{
-	text-align:center;
 	/*border:1px solid black;*/
+	text-align:center;
 	background-color:rgba(0,200,0,0.5)}
 
 
