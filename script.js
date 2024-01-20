@@ -38,7 +38,7 @@ async function FuncionFetch(archivo){
 	mitexto.innerHTML = extraer+"</div>";//+" Pesos";
 	let sofmeger = await document.getElementsByClassName("softmerge-inner");
 	fondo.style.filter="blur(8px)";
-	sofmeger[0].style.width="80%";
+	sofmeger[0].style.width="50ch";
 	sofmeger[0].style.left="50%";
 	sofmeger[0].style.translate="-50%";
 	cargando.style.opacity="0";
